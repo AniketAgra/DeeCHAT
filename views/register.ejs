@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create your account • DeeCHAT</title>
+    <meta name="description" content="Register for DeeCHAT" />
+    <link rel="preload" href="/styles/theme.css" as="style" />
+    <link rel="stylesheet" href="/styles/auth-form.css" />
+</head>
+<body>
+    <main class="auth-card" role="main">
+        <header>
+            <h1>Join DeeCHAT</h1>
+            <p>Create your account in seconds.</p>
+        </header>
+        <form class="auth-form" method="POST" action="/auth/register" novalidate>
+            <div class="field-group">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="username">Username</label>
+                <div class="input-wrapper">
+                    <input id="username" name="username" type="text" placeholder="yourusername" minlength="3" maxlength="24" autocomplete="username" required />
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <input id="password" name="password" type="password" placeholder="••••••••" minlength="6" autocomplete="new-password" required />
+                </div>
+            </div>
+            <button class="btn-primary" type="submit">Create account</button>
+            <p class="subtext">By continuing you agree to our Terms & Privacy.</p>
+        </form>
+    </main>
+</body>
+</html>

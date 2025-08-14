@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('index'); //index - is the view file located at views/index.ejs
+    res.send('Welcome to the DeepChat API');
 })
 
 module.exports = router;
