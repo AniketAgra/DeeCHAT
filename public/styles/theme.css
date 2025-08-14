@@ -44,6 +44,16 @@
 
   /* Layout constraints */
   --max-width-xs: 420px;
+
+  /* Chat specific (default = dark) */
+  --msg-in-bg: #2a2d31;
+  --msg-in-color: var(--color-text);
+  --msg-out-bg: #000000;
+  --msg-out-color: #ffffff;
+  --msg-in-border: #32363b;
+  --msg-out-border: #000000;
+  --composer-bg: var(--color-surface-alt);
+  --composer-border: var(--color-border);
 }
 
 @media (prefers-color-scheme: light) {
@@ -55,7 +65,53 @@
     --color-text-dim: #5a6572;
     --color-border: #d8dee5;
     --color-input-bg: #fff;
+
+    /* Light mode chat overrides */
+    --msg-in-bg: #eef0f2;
+    --msg-in-color: #1c232b;
+    --msg-out-bg: #000000; /* black outbound bubble per design */
+    --msg-out-color: #ffffff;
+    --msg-in-border: #e2e6ea;
+    --msg-out-border: #000000;
+    --composer-bg: #f3f5f7;
+    --composer-border: #d8dee5;
   }
+}
+
+/* Explicit theme classes override (allows manual toggle) */
+.theme-light {
+  --color-bg: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f0f3f7;
+  --color-text: #1c232b;
+  --color-text-dim: #5a6572;
+  --color-border: #d8dee5;
+  --color-input-bg: #fff;
+  --msg-in-bg: #eef0f2;
+  --msg-in-color: #1c232b;
+  --msg-out-bg: #000000;
+  --msg-out-color: #ffffff;
+  --msg-in-border: #e2e6ea;
+  --msg-out-border: #000000;
+  --composer-bg: #f3f5f7;
+  --composer-border: #d8dee5;
+}
+.theme-dark {
+  --color-bg: #0f1115;
+  --color-surface: #181b21;
+  --color-surface-alt: #1f242b;
+  --color-text: #f5f7fa;
+  --color-text-dim: #b5bcc7;
+  --color-border: #2a3038;
+  --color-input-bg: #14171c;
+  --msg-in-bg: #2a2d31;
+  --msg-in-color: #f5f7fa;
+  --msg-out-bg: #000000;
+  --msg-out-color: #ffffff;
+  --msg-in-border: #32363b;
+  --msg-out-border: #000000;
+  --composer-bg: #1f242b;
+  --composer-border: #2a3038;
 }
 
 /* Utility classes (optional minimal set) */

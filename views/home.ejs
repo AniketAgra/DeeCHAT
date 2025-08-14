@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeeCHAT • Chat</title>
+    <meta name="description" content="Chat interface" />
+    <link rel="preload" href="/styles/theme.css" as="style" />
+    <link rel="stylesheet" href="/styles/chat.css" />
+</head>
+<body>
+        <div class="layout">
+            <aside class="sidebar" aria-label="Conversations" data-sidebar>
+                <div class="sidebar-header">
+                    <h2>Chats</h2>
+                    <button class="new-chat-btn" type="button" data-new-chat aria-label="Start new chat">+</button>
+                </div>
+                <nav class="conversation-list" role="list" data-conversation-list>
+                    <!-- Conversation items will be injected / sample static -->
+                    <button class="conversation-item active" data-convo-id="default" aria-current="true">
+                        <span class="title">New Chat</span>
+                    </button>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="compact secondary" data-clear-all type="button">Clear All</button>
+                </div>
+            </aside>
+            <div class="chat-app" role="application">
+                                <header class="chat-header">
+                                    <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar" data-sidebar-toggle>
+                                        <span></span><span></span><span></span>
+                                    </button>
+                                    <h1>DeeCHAT</h1>
+                                </header>
+                <section class="messages" aria-live="polite" aria-label="Chat messages"></section>
+                <div class="composer-wrapper">
+                    <form id="composer-form" class="composer" autocomplete="off">
+                        <textarea id="message-input" name="message" placeholder="Type a message" rows="1" aria-label="Message input" required></textarea>
+                        <button type="submit" aria-label="Send message">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <script src="/scripts/chat.js" defer></script>
+</body>
+</html>

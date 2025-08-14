@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Log in • DeeCHAT</title>
+    <meta name="description" content="Login to DeeCHAT" />
+    <link rel="preload" href="/styles/theme.css" as="style" />
+    <link rel="stylesheet" href="/styles/auth-form.css" />
+</head>
+<body>
+    <main class="auth-card" role="main">
+        <header>
+            <h1>Welcome back</h1>
+            <p>Sign in to continue.</p>
+        </header>
+        <form class="auth-form" method="POST" action="/auth/login" novalidate>
+            <div class="field-group">
+                <label for="login-username">Username or Email</label>
+                <div class="input-wrapper">
+                    <input id="login-username" name="identifier" type="text" placeholder="username or email" autocomplete="username" required />
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="login-password">Password</label>
+                <div class="input-wrapper">
+                    <input id="login-password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+                </div>
+            </div>
+            <button class="btn-primary" type="submit">Log in</button>
+            <p class="subtext">Forgot your password? (coming soon)</p>
+        </form>
+    </main>
+</body>
+</html>
