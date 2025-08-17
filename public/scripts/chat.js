@@ -1,6 +1,8 @@
 // Basic client-side chat logic (placeholder for future real-time integration)
 // Mobile-first considerations: minimal DOM writes, smooth scroll.
 
+const { Socket } = require("socket.io");
+
 (function() {
   const messagesEl = document.querySelector('.messages');
   const form = document.querySelector('#composer-form');
@@ -178,6 +180,7 @@
 
     // Simulate a reply (placeholder)
     setTimeout(() => {
+        socket.emit('ai-message', value);
       appendMessage({ text: 'Echo: ' + value, outbound: false });
     }, 600);
   });

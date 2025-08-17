@@ -10,6 +10,10 @@ async function getLoginController(req, res) {
     res.render('login');
 }
 
+async function getLogoutController(req, res){
+    res.render('login');
+}
+
 async function postRegisterController(req, res) {
     const { email, username, password } = req.body || {};
     
@@ -44,7 +48,7 @@ async function postRegisterController(req, res) {
 
     res.cookie('token', token, { httpOnly: true });
 
-    return res.status(201).json({ message: 'Registered successfully (stub)', user: newUser, token });
+    return res.redirect('/');
 }
 
 async function postLoginController(req, res){
@@ -67,18 +71,20 @@ async function postLoginController(req, res){
     }
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h'});
     res.cookie('token', token, { httpOnly: true });
-    return res.json({ message: 'Login successful', user, token });
+    return res.redirect('/');
 }
 
-async function postLogoutController(){
-    res.clearCookie('token');
-    res.render('/auth/login', { message: 'Logged out successfully' });
+async function postLogoutController(req, res){
+    res.clearCookie('token', { httpOnly: true });
+    return res.redirect('/auth/login?message=Logged%20out');
 }
+
 
 module.exports = {
     getRegisterController,
     postRegisterController,
     getLoginController,
     postLoginController,
-    postLogoutController
+    postLogoutController,
+    getLogoutController
 };

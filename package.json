@@ -1,12 +1,17 @@
 {
   "dependencies": {
+    "@google/genai": "^1.14.0",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "genai": "^0.0.18",
+    "install": "^0.13.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.17.1"
+    "mongoose": "^8.17.1",
+    "npm": "^11.5.2",
+    "socket.io": "^4.8.1"
   }
 }
