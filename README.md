@@ -24,8 +24,8 @@ It supports **login/signup**, **real-time streaming responses**, **short-term me
 
 ---
 
-## 📸 Screenshots (Optional)
-> Add some screenshots of your login page, chat interface, and sidebar here.
+## 📸 Screenshots
+> 
 
 ---
 
